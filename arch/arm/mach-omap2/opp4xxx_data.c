@@ -28,6 +28,10 @@
 #include "omap_opp_data.h"
 #include "pm.h"
 
+#ifdef CONFIG_CUSTOM_VOLTAGE
+#include <linux/custom_voltage.h>
+#endif
+
 /*
  * Structures containing OMAP4430 voltage supported and various
  * voltage dependent data for each VDD.
@@ -343,6 +347,10 @@ int __init omap4_opp_init(void)
 		omap4_mpu_opp_enable(1500000000);
 		omap4_mpu_opp_enable(1600000000);
 	}
+
+#ifdef CONFIG_CUSTOM_VOLTAGE
+	customvoltage_init();
+#endif
 
 	return r;
 }
