@@ -420,10 +420,11 @@ static int sr_class1p5_enable(struct voltagedomain *voltdm,
 		return 0;
 
 	/* Based on Imoseyon's idea to properly calibrate high frequencies e.g. >= 1.5Ghz MPU */
-	if (volt_data->volt_nominal >= 1350000) {
+	if (volt_data->volt_nominal >= 1300000) {
 		volt_data->volt_calibrated = volt_data->volt_nominal;
 		volt_data->volt_dynamic_nominal = volt_data->volt_nominal;
 		pr_info("[franciscofranco] %p - nominal %d", __func__, volt_data->volt_nominal);
+		pr_info("[franciscofranco] %p - in the selected OPP its default nominal voltage is equal or above 1300mV so we don't calibrate it to prevent a crash.", __func__);
 		return 0;
 	}
 
