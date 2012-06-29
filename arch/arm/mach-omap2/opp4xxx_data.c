@@ -210,7 +210,7 @@ static struct omap_vdd_dep_volt omap446x_vdd_mpu_core_dep_data[] = {
 	{.main_vdd_volt = OMAP4460_VDD_MPU_OPPNITRO_UV, .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
 	{.main_vdd_volt = OMAP4460_VDD_MPU_OPP_OC_A, .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
 	{.main_vdd_volt = OMAP4460_VDD_MPU_OPP_OC_B, .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
-	{.main_vdd_volt = OMAP4460_VDD_MPU_OPP_OC_D, .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
+	{.main_vdd_volt = OMAP4460_VDD_MPU_OPP_OC_C, .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
 	{.main_vdd_volt = OMAP4460_VDD_MPU_OPP_OC_D , .dep_vdd_volt = OMAP4460_VDD_CORE_OPP100_UV},
 };
 
